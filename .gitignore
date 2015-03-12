@@ -1,0 +1,80 @@
+*.py[cod]
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+downloads
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib64
+__pycache__
+coverage
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+coverage.xml
+.tox
+nosetests.xml
+.noseids
+src/realmassive/htmlcov
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Eclipse
+.pydevproject
+.settings
+.tern-project
+
+# Emacs
+TAGS
+
+# project related
+ngminned
+node_modules
+bower_components
+src/realmassive/static
+src/realmassive/distlib
+.data/*
+!.data/.gitkeep
+
+# Sublime Text files
+*.sublime-*
+
+sftp-config.json
+src/realmassive/core/models/listing.py
+
+# GAE import production to local data log files
+bulkloader-*
+
+.DS_Store
+src/realmassive/pre-commit.sh
+
+# build version information
+src/realmassive/version.py
+
+# Coverage reports
+src/realmassive/htmlcov
+
+.buildout/download-cache
+docs/html
+docs/doctrees
+scripts/.vagrant
