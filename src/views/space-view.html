@@ -1,0 +1,22 @@
+<space-view>
+    <div>
+        <h1>{ space.title }</h1>
+        <p>Status: { space.status }</p>
+        <img src={ space.building.attachments[0].url } />
+    </div>
+
+    <script>
+        var api = require('../api.js');
+        var self = this;
+        self.spaceId = opts.data;
+        self.space = {};
+        self.on('mount', function(){
+            api.getSpace(self.spaceId, function(err, res, body){
+                self.space = JSON.parse(body);
+                self.update();
+            });
+        });
+
+    </script>
+
+</space-view>

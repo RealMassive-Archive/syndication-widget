@@ -1,0 +1,37 @@
+<app>
+  <div class="rm-header" id="header">
+    <h1><a href="#">Realmassive Syndication</a></h1>
+  </div>
+  <div id="realmassive-view"></div>
+
+  <script>
+  var self = this
+  self.currentView = null
+  loadView(viewName, id) {
+    if (self.currentView) {
+      self.currentView.unmount()
+    }
+    self.currentView = riot.mount('div#realmassive-view', viewName, {data: id})[0]
+  }
+
+  studyRoute(collection, id) {
+    switch(collection) {
+    case 'spaces':
+      require('./views/spaces-view.html')
+      self.loadView('spaces-view', id)
+      break;
+    case 'space':
+      require('./views/space-view.html')
+      self.loadView('space-view', id)
+      break;
+    default:
+      riot.route('spaces/1')
+    }
+  }
+  riot.route(self.studyRoute)
+  this.on('mount', function() {
+    riot.route.exec(self.studyRoute)
+  })
+  </script>
+
+</app>

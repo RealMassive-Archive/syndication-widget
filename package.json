@@ -1,0 +1,32 @@
+{
+  "name": "realmassive-syndication",
+  "version": "1.0.0",
+  "description": "Embeddable Realmassive widget",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/realmassive/realmassive-syndication/"
+  },
+  "keywords": [
+    "realmassive",
+    "syndicate",
+    "widget"
+  ],
+  "author": "Real Massive",
+  "devDependencies": {
+    "browserify": "^8.1.3",
+    "light-server": "^0.1.2",
+    "minifyify": "^6.2.0",
+    "riotify": "^0.0.9"
+  },
+  "scripts": {
+    "build": "npm run build:js && npm run build:css",
+    "build:js": "browserify -t [riotify --ext html] -d src/index.js -p [minifyify --compressPath . --map index.js.map --output build/index.js.map] -o build/index.js",
+    "build:css": "cp src/main.css build/main.css",
+    "dev": "light-server -s . -p 9090 -w 'src/**' -c 'npm run build'"
+  },
+  "dependencies": {
+    "riot": "^2.0.12",
+    "browser-request": "0.3.2"
+  }
+}

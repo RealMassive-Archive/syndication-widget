@@ -1,0 +1,38 @@
+<spaces-view>
+    <h2>Spaces in Austin, TX</h2>
+    <div if={ spaces.length === 0 }>Loading...</div>
+    <div class="space-panel" each={ spaces }>
+        <div class="photos">
+            <img class="cover-photo" src={ cover.url } />
+        </div>
+        <span class="body-text">
+            <b class="space-title">{ title }, <span>Available Now</span></b>
+            <span class="text-field">
+                <p>{ building.address.street }</p>
+                <p>{ building.address.city + ', ' + building.address.state + ' ' + building.address.zipcode }</p>
+            </span>
+            <span class="text-field">
+                <p>{ building.type }</p>
+                <p>{ space_available + ' ' + building.size_units }</p>
+            </span>
+        </span>
+        <img class="google-map" src="http://maps.googleapis.com/maps/api/staticmap?markers=color:blue%7Cicon:https://www.realmassive.com/static/img/map-pointer-small.png%7C{  building.address.geo.latitude },{ building.address.geo.longitude }%7C&size=150x100&sensor=false&zoom=12&style=feature:all%7Celement:all%7Csaturation:-100" />
+        <a href="#space/{ space_id }" class="view">View Space</a>
+    </div>
+    <div class="nav" show={ spaces.length }>
+      <a if={ page > 1 } href="#spaces/{ page - 1 }">&lt; Prev</a>
+      <a if={ page < 20 } href="#spaces/{ page - -1 }">Next &gt;</a>
+    </div>
+    <script>
+        var api = require("../api.js");
+        var self = this;
+        self.page = opts.data;
+        self.spaces = [];
+        self.on('mount', function(){
+            api.getSpaces(self.page,10, function(err, res, body){
+                self.spaces = JSON.parse(body).results;
+                self.update();
+            })
+        });
+    </script>
+</spaces-view>

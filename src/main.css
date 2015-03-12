@@ -1,0 +1,116 @@
+/* General view styles */
+#realmassive-view *, #realmassive-view *:before, #realmassive-view *:after {
+	box-sizing: border-box;
+		font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+#realmassive-view {
+	max-width: 960px;
+	margin: auto;
+}
+
+
+#realmassive-view h2{
+	font-size: 24px;
+	font-weight: 300;
+}
+#header.rm-header{
+	text-align: center;
+}
+
+
+#header.rm-header h1{
+	font-size: 36px;
+}
+
+/* Space card styles */
+#realmassive-view .space-panel {
+	background-color: #eee;
+	width: 100%;
+	display: block;
+	float: left;
+	border: 1px #ccc solid;
+	padding: 10px;
+	margin-bottom: 10px;
+	text-decoration: none;
+	transition: all 0.25s;
+		-webkit-transition: all 0.25s;
+			-moz-transition: all 0.25s;
+}
+#realmassive-view .space-panel:hover {
+	background-color: #fff;
+}
+
+#realmassive-view span.body-text {
+	float: left;
+	display: block;
+	font-weight: 300;
+	width: 50%;
+	line-height: 1.2em;
+}
+
+#realmassive-view span.body-text span.text-field {
+	width: 50%;
+	float: left;
+	padding-left: 30px;
+}
+
+#realmassive-view span.body-text .space-title {
+	font-weight: bold;
+	color: #012655;
+	display: block;
+	padding-left: 30px;
+}
+#realmassive-view span.body-text .space-title span{
+	font-weight: 300;
+	color: #3C96D2;
+	display: block;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #D9E0E2;
+	margin-right: 30px;
+}
+
+#realmassive-view .space-panel span.body-text p{
+	margin: 0;
+	text-decoration: none !important;
+	color: #012655;
+}
+
+#realmassive-view .photos {
+	position: relative;
+	display: block;
+	float: left;
+	overflow: hidden;
+	height: 90px;
+	width: 125px;
+}
+
+
+#realmassive-view .photos img{
+	width: 175px;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#realmassive-view .availability {
+	color: #4398d3;
+}
+
+#realmassive-view .view {
+	color: #2f3e4e;
+	padding: 5px 10px;
+	float: right;
+	border: 1px solid #2f3e4e;
+	text-decoration: none;
+	border-radius: 3px;
+	margin-top: 30px;
+	margin-right: 10px;
+}
+
+/* Pagination */
+#realmassive-view .nav {
+	display: block;
+	clear: both;
+}
