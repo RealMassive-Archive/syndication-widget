@@ -17,7 +17,7 @@
             </span>
         </span>
         <img class="google-map" src="http://maps.googleapis.com/maps/api/staticmap?markers=color:blue%7Cicon:https://www.realmassive.com/static/img/map-pointer-small.png%7C{  building.address.geo.latitude },{ building.address.geo.longitude }%7C&size=150x100&sensor=false&zoom=12&style=feature:all%7Celement:all%7Csaturation:-100" />
-        <a href="#space/{ space_id }" class="view">View Space</a>
+        <a href="https://www.realmassive.com/spaces/{ space_id }" target="_blank" class="view">View Space</a>
     </div>
     <div class="nav" show={ spaces.length }>
       <a if={ page > 1 } href="#spaces/{ page - 1 }">&lt; Prev</a>
