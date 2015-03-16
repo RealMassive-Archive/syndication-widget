@@ -26,7 +26,7 @@
     "dev": "light-server -s . -p 9090 -w 'src/**' -c 'npm run build'"
   },
   "dependencies": {
-    "riot": "^2.0.12",
+    "riot": "2.0.12",
     "browser-request": "0.3.2"
   }
 }
