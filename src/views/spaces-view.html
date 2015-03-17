@@ -17,7 +17,7 @@
             </span>
             <span class="text-field">
                 <p>{ building.type }</p>
-                <p>{ space_available + ' ' + building.size_units }</p>
+                <p>{ filters.addCommas(space_available) + ' ' + filters.defaultSF(building.size_units) }</p>
             </span>
         </span>
         <img class="google-map" src="http://maps.googleapis.com/maps/api/staticmap?markers=color:blue%7Cicon:https://www.realmassive.com/static/img/map-pointer-small.png%7C{  building.address.geo.latitude },{ building.address.geo.longitude }%7C&size=150x100&sensor=false&zoom=12&style=feature:all%7Celement:all%7Csaturation:-100" />
